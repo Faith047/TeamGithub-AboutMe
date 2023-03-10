@@ -1,0 +1,109 @@
+{
+	"id": "a74e7513-ff24-425b-8a60-e4302d48f816",
+	"name": "Get All Todo Entries",
+	"timestamp": "2023-03-10T02:42:27.931Z",
+	"collection_id": "26147728-e3ab7e20-2bfa-4465-b1ff-b744dd4cac91",
+	"folder_id": 0,
+	"environment_id": "26147728-8a6eb8be-5702-444b-be80-f5545d31a141",
+	"totalPass": 21,
+	"delay": "0200",
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-03-10T02:42:23.137Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1f9fb081-2cd3-4a9b-9a56-a7e827b02a74",
+			"name": "Get All Todo Entries Swagger",
+			"url": "https://petstore.swagger.io/v2/swagger.json?swagger.json_name=user&swagger.json_description=Everything about your Pets",
+			"time": 297,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code name should have an OK string": true,
+				"Confirm that swagger is 2.0": true,
+				"Confirm that tag with Pets is present": true,
+				"Confirm that tag with description of 'Everything about your Pets' is 0": true,
+				"Confirm that tag with store is present": true,
+				"Confirm that tag with user is present": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Status code name should have an OK string": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Confirm that swagger is 2.0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Confirm that tag with Pets is present": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Confirm that tag with description of 'Everything about your Pets' is 0": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Confirm that tag with store is present": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Confirm that tag with user is present": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				1107,
+				314,
+				297
+			],
+			"allTests": [
+				{
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true,
+					"Confirm that swagger is 2.0": true,
+					"Confirm that tag with Pets is present": true,
+					"Confirm that tag with description of 'Everything about your Pets' is 0": true,
+					"Confirm that tag with store is present": true,
+					"Confirm that tag with user is present": true
+				},
+				{
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true,
+					"Confirm that swagger is 2.0": true,
+					"Confirm that tag with Pets is present": true,
+					"Confirm that tag with description of 'Everything about your Pets' is 0": true,
+					"Confirm that tag with store is present": true,
+					"Confirm that tag with user is present": true
+				},
+				{
+					"Status code should be 200": true,
+					"Status code name should have an OK string": true,
+					"Confirm that swagger is 2.0": true,
+					"Confirm that tag with Pets is present": true,
+					"Confirm that tag with description of 'Everything about your Pets' is 0": true,
+					"Confirm that tag with store is present": true,
+					"Confirm that tag with user is present": true
+				}
+			]
+		}
+	],
+	"count": 3,
+	"totalTime": 1718,
+	"collection": {
+		"requests": [
+			{
+				"id": "1f9fb081-2cd3-4a9b-9a56-a7e827b02a74",
+				"method": "GET"
+			}
+		]
+	}
+}
