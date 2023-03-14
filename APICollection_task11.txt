@@ -1,0 +1,130 @@
+Swagger Petstore
+
+□ pet / {petId}
+└ Find pet by ID
+  GET {{baseUrlPet}}/pet/{{FaithID}} [errored]
+     getaddrinfo ENOTFOUND {{baseurlpet}}
+
+└ Updates a pet in the store with form data
+  POST https://petstore.swagger.io/v2/swagger.json/pet/-76496726 [404 Not Found, 516B, 1559ms]
+
+└ Deletes a pet
+  DELETE https://petstore.swagger.io/v2/swagger.json/pet/-76496726 [404 Not Found, 516B, 292ms]
+
+└ uploads an image
+  ┌
+  │ 'Form param `file`, file load error: missing file source'
+  └
+  POST https://petstore.swagger.io/v2/swagger.json/pet/-76496726/uploadImage [404 Not Found, 457B, 290ms]
+
+□ pet
+└ Add a new pet to the store
+  POST {{baseUrlPet}}/pet [errored]
+     getaddrinfo ENOTFOUND {{baseurlpet}}
+
+└ Update an existing pet
+  PUT https://petstore.swagger.io/v2/swagger.json/pet [404 Not Found, 506B, 277ms]
+
+└ Finds Pets by status
+  GET {{baseUrlPet}}/pet/findByStatus?status=available&status=available [errored]
+     getaddrinfo ENOTFOUND {{baseurlpet}}
+  4⠄ JSONError in test-script
+
+└ Finds Pets by tags
+  GET https://petstore.swagger.io/v2/swagger.json/pet/findByTags?tags=voluptate non sunt&tags=dolore occaecat Ut [404 Not Found, 502B, 291ms]
+
+□ store / order / {orderId}
+└ Find purchase order by ID
+  GET {{baseUrlPet}}/store/order/{{FaithID}} [errored]
+     getaddrinfo ENOTFOUND {{baseurlpet}}
+  6. Status code should be 404
+  7. Status code name should have a Not Found string
+
+└ Delete purchase order by ID
+  DELETE https://petstore.swagger.io/v2/swagger.json/store/order/{{FaithID}} [404 Not Found, 534B, 270ms]
+
+□ store / order
+└ Place an order for a pet
+  POST https://petstore.swagger.io/v2/swagger.json/store/order [404 Not Found, 443B, 313ms]
+
+□ store
+└ Returns pet inventories by status
+  GET https://petstore.swagger.io/v2/swagger.json/store/inventory [404 Not Found, 447B, 272ms]
+
+□ user / {username}
+└ Get user by user name
+  GET https://petstore.swagger.io/v2/swagger.json/user/sunt nisi [404 Not Found, 448B, 273ms]
+
+└ Updated user
+  PUT https://petstore.swagger.io/v2/swagger.json/user/sunt nisi [404 Not Found, 519B, 274ms]
+
+└ Delete user
+  DELETE https://petstore.swagger.io/v2/swagger.json/user/sunt nisi [404 Not Found, 519B, 279ms]
+
+□ user
+└ Create user
+  POST https://petstore.swagger.io/v2/swagger.json/user [404 Not Found, 507B, 282ms]
+
+└ Creates list of users with given input array
+  POST https://petstore.swagger.io/v2/swagger.json/user/createWithArray [404 Not Found, 523B, 279ms]
+
+└ Creates list of users with given input array
+  POST https://petstore.swagger.io/v2/swagger.json/user/createWithList [404 Not Found, 522B, 282ms]
+
+└ Logs user into the system
+  GET https://petstore.swagger.io/v2/swagger.json/user/login?username=sunt nisi&password=sunt nisi [404 Not Found, 484B, 274ms]
+
+└ Logs out current logged in user session
+  GET https://petstore.swagger.io/v2/swagger.json/user/logout [404 Not Found, 514B, 273ms]
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                  20 │                   4 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                   2 │                   1 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   0 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                   2 │                   2 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 8.5s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 2.71kB (approx)                                │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 363ms [min: 270ms, max: 1559ms, s.d.: 365ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+  #  failure                detail
+
+ 1.  Error                  getaddrinfo ENOTFOUND {{baseurlpet}}
+                            at request
+                            inside "pet / {petId} / Find pet by ID"
+
+ 2.  Error                  getaddrinfo ENOTFOUND {{baseurlpet}}
+                            at request
+                            inside "pet / Add a new pet to the store"
+
+ 3.  Error                  getaddrinfo ENOTFOUND {{baseurlpet}}
+                            at request
+                            inside "pet / Finds Pets by status"
+
+ 4.  JSONError              Unexpected token u in JSON at position 0
+                            at test-script
+                            inside "pet / Finds Pets by status"
+
+ 5.  Error                  getaddrinfo ENOTFOUND {{baseurlpet}}
+                            at request
+                            inside "store / order / {orderId} / Find purchase order by ID"
+
+ 6.  AssertionError         Status code should be 404
+                            expected { Object (id, _details, ...) } to have property 'code'
+                            at assertion:0 in test-script
+                            inside "store / order / {orderId} / Find purchase order by ID"
+
+ 7.  AssertionError         Status code name should have a Not Found string
+                            expected response to have status reason 'Not Found' but got undefined
+                            at assertion:1 in test-script
+                            inside "store / order / {orderId} / Find purchase order by ID"
